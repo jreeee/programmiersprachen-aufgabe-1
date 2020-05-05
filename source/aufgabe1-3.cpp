@@ -8,12 +8,13 @@ int main()
 	while (true) {
 		while (x%i == 0) {
 			if (i == 20) {
-				std::cout << x"\n";
+				std::cout << x << std::endl;
 				return 0;
 			}
 			i++;
 		}
 		x++;
+		i = 1;
 	}
 	
 }
