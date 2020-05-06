@@ -2,7 +2,7 @@
 #include <iostream>
 #include <catch.hpp>
 
-int qsum(int num)
+int checksum(int num)
 {
 	int res = 0;
 	while (num > 0) {
@@ -16,15 +16,15 @@ int qsum(int num)
 	return res;
 }
 
-TEST_CASE("testing qsum", "[qsum]")
+TEST_CASE("testing checksum", "[checksum]")
 {
-	REQUIRE(qsum(10) == 1);
-	REQUIRE(qsum(233) == 8);
-	REQUIRE(qsum(6753247) == 34); 
-	REQUIRE(qsum(329462223) == 33);
-	REQUIRE(qsum(-1) == 0 );
-	REQUIRE(qsum(0) == 0);
-	REQUIRE(qsum(-763294) == 0);
+	REQUIRE(checksum(10) == 1);
+	REQUIRE(checksum(233) == 8);
+	REQUIRE(checksum(6753247) == 34); 
+	REQUIRE(checksum(329462223) == 33);
+	REQUIRE(checksum(-1) == 0 );
+	REQUIRE(checksum(0) == 0);
+	REQUIRE(checksum(-763294) == 0);
 }
 
 int main(int argc, char* argv[])
