@@ -3,9 +3,9 @@ add_executable(helloworld helloworld.cpp)
 
 add_executable(tests tests.cpp)
 
-add_executable(aufgabe1-3 aufgabe1-3.cpp)
+add_executable(aufgabe1-03 aufgabe1-03.cpp)
 
-add_executable(aufgabe1-9 aufgabe1-9.cpp)
+add_executable(aufgabe1-09 aufgabe1-09.cpp)
 
 add_executable(aufgabe1-10 aufgabe1-10.cpp)
 
