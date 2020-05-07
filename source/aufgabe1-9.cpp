@@ -20,6 +20,7 @@ TEST_CASE("testing checksum", "[checksum]")
 {
 	REQUIRE(checksum(10) == 1);
 	REQUIRE(checksum(233) == 8);
+	REQUIRE(checksum(120996) == 27);
 	REQUIRE(checksum(6753247) == 34); 
 	REQUIRE(checksum(329462223) == 33);
 	REQUIRE(checksum(-1) == 0 );
