@@ -25,7 +25,6 @@ TEST_CASE("testing sum_multiples", "[sum_multiples]")
 	REQUIRE(sum_multiples(15) == 60);
 	REQUIRE(sum_multiples(0) == 234168);
 	REQUIRE(sum_multiples(1000) == 234168);
-
 }
 int main(int argc, char* argv[])
 {
