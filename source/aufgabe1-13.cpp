@@ -2,25 +2,25 @@
 #include <iostream>
 #include <catch.hpp>
 
-long factorial(long num)
+long factorial(long num_)
 {
-	if ((num < 0) || (num > 20)) return -1;
-	if (num == 0) return 1;
-	long res = 1;
-	for (num; num > 0; num--) {
-		res = res * num;
+	if ((num_ < 0) || (num_ > 20)) return -1;
+	if (num_ == 0) return 1;
+	long res_ = 1;
+	for (num_; num_ > 0; num_--) {
+		res_ = res_ * num_;
 	}
 }
 
 void detUB()
 {
-	long num = 10;
-	long res = factorial(num);
-	while (factorial(num) > 0) {
-		num++;
-		res = factorial(num);
+	long num_ = 10;
+	long res_ = factorial(num_);
+	while (factorial(num_) > 0) {
+		num_++;
+		res_ = factorial(num_);
 	}
-	std::cout << (num -1) << " is the upper bound\n";
+	std::cout << (num_ -1) << " is the upper bound\n";
 }
 
 TEST_CASE("testing factorial", "[factorial]")

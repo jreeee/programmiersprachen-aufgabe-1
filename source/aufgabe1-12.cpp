@@ -3,17 +3,17 @@
 #include <catch.hpp>
 #include <cmath>
 
-double calcCylVol (int radius, int height)
+double calcCylVol (int radius_, int height_)
 {
-	if ((radius > 0) && (height > 0)) {
-		return (M_PI * (radius * radius) * height); 
+	if ((radius_ > 0) && (height_ > 0)) {
+		return (M_PI * (radius_ * radius_) * height_); 
 	}
 	return -1;
 }
-double calcCylArea (int radius, int height)
+double calcCylArea (int radius_, int height_)
 {
-	if ((radius > 0) && (height > 0)) {
-		return (2 * M_PI * radius * (height + radius));
+	if ((radius_ > 0) && (height_ > 0)) {
+		return (2 * M_PI * radius_ * (height_ + radius_));
 	}
 	return -1;
 }

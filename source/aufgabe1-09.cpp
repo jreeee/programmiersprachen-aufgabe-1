@@ -2,18 +2,18 @@
 #include <iostream>
 #include <catch.hpp>
 
-int checksum(int num)
+int checksum(int num_)
 {
-	int res = 0;
-	while (num > 0) {
-		if (num < 10) {
-			res = res + num;
-			return res;
+	int res_ = 0;
+	while (num_ > 0) {
+		if (num_ < 10) {
+			res_ = res_ + num_;
+			return res_;
 		}
-		res = res + (num % 10);
-		num = num / 10;
+		res_ = res_ + (num_ % 10);
+		num_ = num_ / 10;
 	}
-	return res;
+	return res_;
 }
 
 TEST_CASE("testing checksum", "[checksum]")

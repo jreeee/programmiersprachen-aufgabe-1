@@ -2,19 +2,19 @@
 
 int main()
 {
-	int x = 1;
-	int i = 2;
+	int number_ = 1;
+	int counter_ = 2;
 
 	while (true) {
-		while (x%i == 0) {
-			if (i == 20) {
-				std::cout << x << std::endl;
+		while (number_%counter_ == 0) {
+			if (counter_ == 20) {
+				std::cout << number_ << std::endl;
 				return 0;
 			}
-			i++;
+			counter_++;
 		}
-		x++;
-		i = 1;
+		number_++;
+		counter_ = 1;
 	}
 	
 }

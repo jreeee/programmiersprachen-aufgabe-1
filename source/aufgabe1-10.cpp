@@ -2,50 +2,51 @@
 #include <iostream>
 #include <catch.hpp>
 
-int sum_multiples(int range)
+int sum_multiples(int range_)
 {
-	int sum = 0;
-	if ((range < 1) || (range > 95934)) range = 1000;
+	int sum_ = 0;
+	if ((range_ < 1) || (range_ > 95934)) range_ = 1000;
 	//if the range value is less than one or would cause an overflow, we set it to 1000
-	for (range; range > 0; range--) {
-		if ((range % 3) == 0) {
-			sum = sum + range;
+    //to use upperbound() or betterUB() the if statement above needs to be commented out
+	for (range_; range_ > 0; range_--) {
+		if ((range_ % 3) == 0) {
+			sum_ = sum_ + range_;
 		}
-		else if ((range % 5) == 0) {
-			sum = sum + range;
+		else if ((range_ % 5) == 0) {
+			sum_ = sum_ + range_;
 		}
 	}
-	return sum;
+	return sum_;
 }
 
 void upperbound()
 //very basic way to calculate the overflow barrier
 {
-	int max = 1000;
-	int val = sum_multiples(max);
-	while (val > 0) {
-		max++;
-		val = sum_multiples(max);
+	int max_ = 1000;
+	int val_ = sum_multiples(max_);
+	while (val_ > 0) {
+		max_++;
+		val_ = sum_multiples(max_);
 	}
-	std::cout << (max - 1) << "\n";
+	std::cout << (max_ - 1) << "\n";
 }
 
 void betterUB()
 //better way to go about calculating the upper bound
 {
-	int max = 1000;
-	int val = sum_multiples(max);
-	int n = 2;
-	while (val > 0) {
-		max = max * 2;
-		val = sum_multiples(max);
+	int max_ = 1000;
+	int val_ = sum_multiples(max_);
+	int mul_ = 2;
+	while (val_ > 0) {
+		max_ = max_ * 2;
+		val_ = sum_multiples(max_);
 	}
-	while (((sum_multiples(max) > 0) && (sum_multiples(max+1) < 0)) == false) {
-		val = sum_multiples(max);
-		n = n + 2;
-		if (val > 0) max = max + max / n; else max = max - max / n;
+	while (((sum_multiples(max_) > 0) && (sum_multiples(max_+1) < 0)) == false) {
+		val_ = sum_multiples(max_);
+		mul_ = mul_ + 2;
+		if (val_ > 0) max_ = max_ + max_ / mul_; else max_ = max_ - max_ / mul_;
 	}
-	std::cout << (max) << "\n";
+	std::cout << (max_) << "\n";
 }
 
 TEST_CASE("testing sum_multiples", "[sum_multiples]")

@@ -2,21 +2,21 @@
 #include <catch.hpp>
 #include <cmath>
 
-int gcd(int a, int b)
+int gcd(int num1_, int num2_)
 {
-	int smallerNumber = a;
-	int biggerNumber = b;
+	int smallerNumber_ = num1_;
+	int biggerNumber_ = num2_;
 
-	if (a > b) {
-		biggerNumber = a;
-	       	smallerNumber = b;
+	if (num1_ > num2_) {
+		biggerNumber_ = num1_;
+        smallerNumber_ = num2_;
 	}
 
-	int res = smallerNumber;
-	while (((biggerNumber % res) + (smallerNumber % res)) != 0) {
-		res--;
+	int res_ = smallerNumber_;
+	while (((biggerNumber_ % res_) + (smallerNumber_ % res_)) != 0) {
+		res_--;
 		}
-	return res;
+	return res_;
 }
 
 TEST_CASE("describe_gcd", "[gcd]")
