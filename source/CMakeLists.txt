@@ -9,6 +9,8 @@ add_executable(aufgabe1-09 aufgabe1-09.cpp)
 
 add_executable(aufgabe1-10 aufgabe1-10.cpp)
 
+add_executable(aufgabe1-11 aufgabe1-11.cpp)
+
 add_executable(aufgabe1-12 aufgabe1-12.cpp)
 
 add_executable(aufgabe1-13 aufgabe1-13.cpp)
